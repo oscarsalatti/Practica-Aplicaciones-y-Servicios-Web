@@ -2,14 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plataforma líder en formación online técnica, diseño e idiomas.">
-    <meta name="keywords" content="cursos, formación, online, tecnología, diseño, idiomas">
-    <meta name="author" content="Óscar Salatti González/a">
     <title>Portada | Formación Global Online</title>
+    <!-- Vinculamos el CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <h1>Formación Global Online</h1>
         <nav>
             <ul>
@@ -21,31 +20,34 @@
     </header>
 
     <main>
-        <section id="introduccion">
-            <h2>Bienvenido a tu futuro profesional</h2>
-            <p>Formación Global Online es una plataforma dedicada a democratizar el acceso al conocimiento. Ofrecemos cursos especializados de alta calidad, diseñados por expertos de la industria para ayudarte a alcanzar tus metas profesionales desde cualquier lugar del mundo.</p>
-        </section>
+        <!-- Banner superior requerido -->
+        <img src="https://via.placeholder.com/1200x400" alt="Banner principal de formación" class="home-banner">
 
-        <section id="categorias">
-            <h2>Categorías de cursos</h2>
-            <ul>
-                <li>Tecnología y Programación</li>
-                <li>Diseño Gráfico y UX/UI</li>
-                <li>Empresa y Marketing Digital</li>
-                <li>Idiomas</li>
-                <li>Habilidades Blandas (Soft Skills)</li>
-            </ul>
-        </section>
+        <section>
+            <h2 style="text-align: center; margin-bottom: 2rem;">Bienvenidos a la Plataforma</h2>
+            
+            <!-- Grid 2x2 requerido -->
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>Nuevos Cursos</h3>
+                    <p>Descubre nuestra oferta formativa actualizada con las últimas tecnologías del mercado. HTML5, CSS3, Python y más.</p>
+                </article>
 
-        <section id="colaboradores">
-            <h2>Empresas Colaboradoras</h2>
-            <p>Trabajamos con las mejores entidades para certificar tu formación:</p>
-            <ul>
-                <li>Tech Solutions S.A.</li>
-                <li>Creative Minds Studio</li>
-                <li>Global Language Institute</li>
-                <li>Innovate Corp</li>
-            </ul>
+                <article class="info-card">
+                    <h3>Categorías Destacadas</h3>
+                    <p>Explora nuestras áreas principales: Tecnología, Diseño Gráfico, Negocios e Idiomas. Formación para todos los niveles.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Ventajas Online</h3>
+                    <p>Aprende a tu ritmo, desde cualquier lugar y con acceso de por vida a los contenidos. Certificados válidos internacionalmente.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Noticias</h3>
+                    <p>Hemos cerrado un nuevo acuerdo con Tech Solutions S.A. para que nuestros mejores alumnos realicen prácticas remuneradas.</p>
+                </article>
+            </div>
         </section>
     </main>
 
