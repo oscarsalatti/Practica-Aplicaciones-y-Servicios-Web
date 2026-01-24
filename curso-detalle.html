@@ -2,14 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Información detallada sobre el curso de Desarrollo Web.">
-    <meta name="keywords" content="detalle curso, temario, requisitos curso">
-    <meta name="author" content="Óscar Salatti González/a">
     <title>Detalle del Curso | Formación Global Online</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <h1>Formación Global Online</h1>
         <nav>
             <ul>
@@ -21,48 +19,50 @@
     </header>
 
     <main>
-        <article>
-            <header>
-                <h2>Desarrollo Web con HTML y CSS</h2>
-                <img src="https://via.placeholder.com/400x250" alt="Imagen detallada del curso de desarrollo web">
-            </header>
+        <!-- Contenedor Flex para layout lateral -->
+        <article class="detalle-layout">
+            
+            <!-- Lateral Izquierdo: Imagen -->
+            <div class="detalle-img">
+                <img src="https://via.placeholder.com/600x400" alt="Imagen del curso">
+            </div>
 
-            <section id="info-basica">
-                <p><strong>Categoría:</strong> Tecnología | <strong>Nivel:</strong> Básico</p>
-                <p><strong>Profesor Responsable:</strong> Juan Pérez García</p>
-                <p><strong>Duración estimada:</strong> 40 horas</p>
-            </section>
+            <!-- Lateral Derecho: Información -->
+            <div class="detalle-info">
+                <header>
+                    <h2>Desarrollo Web con HTML y CSS</h2>
+                </header>
 
-            <section id="descripcion">
-                <h3>Descripción General</h3>
-                <p>En este curso aprenderás las bases fundamentales de la web. Comenzaremos desde cero con la estructura semántica de HTML5 y terminaremos creando sitios web estéticos y funcionales. Es el primer paso esencial para cualquier aspirante a desarrollador web.</p>
-            </section>
+                <section class="info-basica">
+                    <p><strong>Categoría:</strong> Tecnología</p>
+                    <p><strong>Nivel:</strong> Básico</p>
+                    <p><strong>Profesor:</strong> Juan Pérez García</p>
+                    <p><strong>Duración:</strong> 40 horas</p>
+                </section>
 
-            <section id="temario">
-                <h3>Listado de Contenidos</h3>
-                <ol>
-                    <li>Introducción a Internet y la Web.</li>
-                    <li>Sintaxis y etiquetas básicas de HTML.</li>
-                    <li>Estructura semántica avanzada.</li>
-                    <li>Formularios y validación de datos.</li>
-                    <li>Introducción a CSS y selectores.</li>
-                    <li>Modelo de caja y Layout.</li>
-                </ol>
-            </section>
+                <section id="descripcion">
+                    <h3>Descripción General</h3>
+                    <p>En este curso aprenderás las bases fundamentales de la web. Comenzaremos desde cero con la estructura semántica de HTML5 y terminaremos creando sitios web estéticos y funcionales con CSS moderno.</p>
+                </section>
 
-            <section id="requisitos">
-                <h3>Requisitos Previos</h3>
-                <ul>
-                    <li>Conocimientos básicos de navegación por internet.</li>
-                    <li>No se requiere experiencia previa en programación.</li>
-                    <li>Un editor de texto (VS Code recomendado).</li>
-                </ul>
-            </section>
+                <section id="temario" style="margin-top: 1rem;">
+                    <h3>Contenidos</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Introducción a Internet.</li>
+                        <li>Etiquetas HTML5.</li>
+                        <li>CSS: Selectores y Box Model.</li>
+                        <li>Flexbox y Grid.</li>
+                    </ul>
+                </section>
+                
+                <div style="margin-top: 2rem;">
+                     <a href="cursos.html" style="background: var(--primary-color); color: white; padding: 10px 20px; border-radius: 5px;">Volver al catálogo</a>
+                </div>
+            </div>
         </article>
     </main>
 
     <footer>
-        <p><a href="cursos.html">Volver al listado de cursos</a></p>
         <p>&copy; 2026 Formación Global Online. Todos los derechos reservados.</p>
     </footer>
 
