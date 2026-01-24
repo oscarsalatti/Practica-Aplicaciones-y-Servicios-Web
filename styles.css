@@ -1,0 +1,278 @@
+/* --- RESET Y ESTILOS GENERALES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro */
+    --accent-color: #3498db;  /* Azul claro */
+    --text-color: #333;
+    --bg-light: #f4f4f4;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    /* Padding superior para compensar el menú fijo */
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    flex: 1; /* Para que el footer se vaya al fondo */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* --- HEADER Y NAVEGACIÓN (FIJO) --- */
+header.main-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header.main-header h1 {
+    font-size: 1.5rem;
+}
+
+header.main-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header.main-header nav a {
+    color: var(--white);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header.main-header nav a:hover {
+    color: var(--accent-color);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* --- PÁGINA DE INICIO (INDEX) --- */
+/* Banner superior */
+.home-banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Recorta la imagen para llenar el espacio */
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+/* Grid 2x2 para los bloques */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 2rem;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+}
+
+/* --- LISTADO DE CURSOS --- */
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 2rem;
+}
+
+.curso-card {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    padding-bottom: 1rem;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.curso-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.curso-card h3 {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    padding: 0 10px;
+}
+
+/* Requisito específico: Mostrar solo imagen y título en el listado */
+/* Ocultamos los detalles p y el enlace textual, hacemos clickeable toda la tarjeta con un truco o dejamos el enlace envolviendo el título */
+.curso-card p.detalle-extra {
+    display: none;
+}
+
+/* --- DETALLE CURSO --- */
+.detalle-layout {
+    display: flex;
+    gap: 3rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.detalle-img {
+    flex: 1; /* Ocupa 1 parte */
+}
+
+.detalle-img img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.detalle-info {
+    flex: 2; /* Ocupa 2 partes (más ancho) */
+}
+
+.detalle-info header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.info-basica {
+    background-color: #e8f4fc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+/* --- PROFESORES (TABLA) --- */
+.tabla-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+table.profesores-table {
+    width: 80%; /* Requisito: 80% ancho */
+    border-collapse: collapse;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table.profesores-table th, 
+table.profesores-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table.profesores-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Requisito: Cambio de color al pasar el ratón */
+table.profesores-table tbody tr:hover {
+    background-color: #e2e6ea;
+    cursor: default;
+}
+
+/* --- RESPONSIVE DESIGN (MÓVIL) --- */
+@media (max-width: 768px) {
+    /* Header normal en móvil */
+    header.main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header.main-header nav ul {
+        margin-top: 10px;
+    }
+
+    body {
+        padding-top: 100px; /* Más espacio para el header apilado */
+    }
+
+    /* Index: 1 columna */
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cursos: 1 o 2 columnas */
+    .cursos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* Detalle: Columna vertical */
+    .detalle-layout {
+        flex-direction: column;
+    }
+    
+    .detalle-img, .detalle-info {
+        flex: auto;
+    }
+
+    /* Tabla: Scroll horizontal si es muy pequeña la pantalla */
+    .tabla-container {
+        overflow-x: auto;
+    }
+    table.profesores-table {
+        width: 100%;
+        min-width: 500px;
+    }
+}
