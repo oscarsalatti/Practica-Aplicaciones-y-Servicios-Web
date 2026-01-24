@@ -2,14 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explora nuestro catálogo completo de cursos online.">
-    <meta name="keywords" content="lista cursos, catálogo formación, aprender online">
-    <meta name="author" content="Óscar Salatti González/a">
     <title>Cursos Disponibles | Formación Global Online</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <h1>Formación Global Online</h1>
         <nav>
             <ul>
@@ -21,42 +19,67 @@
     </header>
 
     <main>
-        <section>
-            <h2>Nuestro Catálogo de Cursos</h2>
+        <h2 style="text-align: center; margin-bottom: 2rem;">Nuestro Catálogo</h2>
+
+        <!-- Grid de 3 columnas -->
+        <section class="cursos-grid">
 
             <!-- Curso 1 -->
-            <article>
-                <h3>Desarrollo Web con HTML y CSS</h3>
-                <img src="https://via.placeholder.com/200x120" alt="Icono de desarrollo web">
-                <p><strong>Categoría:</strong> Tecnología</p>
-                <p><strong>Nivel:</strong> Básico</p>
-                <p><strong>Duración:</strong> 40 horas</p>
-                <p><a href="curso-detalle.html">Ver detalles del curso</a></p>
+            <article class="curso-card">
+                <a href="curso-detalle.html">
+                    <img src="https://via.placeholder.com/300x200" alt="Desarrollo Web">
+                    <h3>Desarrollo Web con HTML y CSS</h3>
+                </a>
+                <!-- Estos datos se ocultan con CSS (display: none) para cumplir el requisito de vista -->
+                <p class="detalle-extra"><strong>Categoría:</strong> Tecnología</p>
+                <p class="detalle-extra"><strong>Nivel:</strong> Básico</p>
+                <p class="detalle-extra"><a href="curso-detalle.html">Ver detalles</a></p>
             </article>
-
-            <hr>
 
             <!-- Curso 2 -->
-            <article>
-                <h3>Diseño de Interfaces de Usuario (UI)</h3>
-                <img src="https://via.placeholder.com/200x120" alt="Icono de diseño UI">
-                <p><strong>Categoría:</strong> Diseño</p>
-                <p><strong>Nivel:</strong> Intermedio</p>
-                <p><strong>Duración:</strong> 30 horas</p>
-                <p><a href="curso-detalle.html">Ver detalles del curso</a></p>
+            <article class="curso-card">
+                <a href="curso-detalle.html">
+                    <img src="https://via.placeholder.com/300x200" alt="Diseño UI">
+                    <h3>Diseño de Interfaces (UI)</h3>
+                </a>
+                <p class="detalle-extra"><strong>Categoría:</strong> Diseño</p>
+                <p class="detalle-extra"><strong>Nivel:</strong> Intermedio</p>
+                <p class="detalle-extra"><a href="curso-detalle.html">Ver detalles</a></p>
             </article>
-
-            <hr>
 
             <!-- Curso 3 -->
-            <article>
-                <h3>Inglés para Negocios</h3>
-                <img src="https://via.placeholder.com/200x120" alt="Icono de idiomas">
-                <p><strong>Categoría:</strong> Idiomas</p>
-                <p><strong>Nivel:</strong> Avanzado</p>
-                <p><strong>Duración:</strong> 60 horas</p>
-                <p><a href="curso-detalle.html">Ver detalles del curso</a></p>
+            <article class="curso-card">
+                <a href="curso-detalle.html">
+                    <img src="https://via.placeholder.com/300x200" alt="Inglés Negocios">
+                    <h3>Inglés para Negocios</h3>
+                </a>
+                <p class="detalle-extra"><strong>Categoría:</strong> Idiomas</p>
+                <p class="detalle-extra"><strong>Nivel:</strong> Avanzado</p>
+                <p class="detalle-extra"><a href="curso-detalle.html">Ver detalles</a></p>
             </article>
+
+             <!-- Añado cursos extra para demostrar el grid de 3 columnas -->
+             <article class="curso-card">
+                <a href="curso-detalle.html">
+                    <img src="https://via.placeholder.com/300x200" alt="Marketing Digital">
+                    <h3>Marketing Digital 360</h3>
+                </a>
+            </article>
+            
+            <article class="curso-card">
+                <a href="curso-detalle.html">
+                    <img src="https://via.placeholder.com/300x200" alt="Python">
+                    <h3>Python desde Cero</h3>
+                </a>
+            </article>
+
+            <article class="curso-card">
+                <a href="curso-detalle.html">
+                    <img src="https://via.placeholder.com/300x200" alt="Liderazgo">
+                    <h3>Liderazgo y Gestión</h3>
+                </a>
+            </article>
+
         </section>
     </main>
 
