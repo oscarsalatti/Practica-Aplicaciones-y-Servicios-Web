@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "titulo": "Introducción a HTML5",
+        "categoria": "Programación",
+        "nivel": "Básico",
+        "imagen": "img/html.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "Diseño Gráfico Avanzado",
+        "categoria": "Diseño",
+        "nivel": "Avanzado",
+        "imagen": "img/design.jpg"
+    },
+    {
+        "id": 3,
+        "titulo": "Inglés de Negocios",
+        "categoria": "Idiomas",
+        "nivel": "Intermedio",
+        "imagen": "img/english.jpg"
+    }
+]
