@@ -3,12 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portada | Formación Global Online</title>
-    <!-- Vinculamos el CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Formación Global Online</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">FGO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="profesores.html">Profesores</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Detalles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="detalle-web.html">Desarrollo Web</a></li>
+            <li><a class="dropdown-item" href="detalle-ui.html">Diseño UI</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="d-flex">
+        <button class="btn btn-sm btn-outline-light me-1" onclick="cambiarTamano(1)">A+</button>
+        <button class="btn btn-sm btn-outline-light" onclick="cambiarTamano(-1)">A-</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Espaciador para el navbar fijo -->
+<div style="margin-top: 80px;"></div>
     <header class="main-header">
         <h1>Formación Global Online</h1>
         <nav>
@@ -55,6 +85,29 @@
     <footer>
         <p>&copy; 2026 Formación Global Online. Todos los derechos reservados.</p>
     </footer>
+<footer class="bg-light text-center text-lg-start mt-5">
+  <div class="container p-4">
+    <p>Administrador: Óscar Salatti | <a href="#">Aviso Legal</a> | <a href="#">Accesibilidad</a></p>
+    <div id="reloj" class="fw-bold">--:--:--</div>
+  </div>
+</footer>
 
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Scripts Globales -->
+<script>
+    // Reloj
+    setInterval(() => {
+        const ahora = new Date();
+        document.getElementById('reloj').innerText = now.toLocaleString();
+    }, 1000);
+
+    // Tamaño de fuente
+    let tamanoActual = 16;
+    function cambiarTamano(cambio) {
+        tamanoActual += cambio;
+        document.body.style.fontSize = tamanoActual + "px";
+    }
+</script>
 </body>
 </html>
